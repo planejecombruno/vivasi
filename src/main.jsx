@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { createRoot } from "react-dom/client";
 import {
   ArrowRight,
@@ -44,6 +44,11 @@ const footerLinks = {
     ["Crédito", "/para-empresa/credito"],
     ["Seguros", "/para-empresa/seguros"],
   ],
+};
+
+const logoDimensions = {
+  width: 831,
+  height: 213,
 };
 
 const socialLinks = [
@@ -159,21 +164,21 @@ const journey = [
 ];
 
 const partners = [
-  { file: "avenue.png", name: "Avenue" },
-  { file: "awt.png", name: "AWT" },
-  { file: "azos.png", name: "Azos" },
-  { file: "bradesco.png", name: "Bradesco" },
-  { file: "btg.png", name: "BTG Pactual" },
-  { file: "icatu.png", name: "Icatu" },
-  { file: "interactive-brokers.png", name: "Interactive Brokers" },
-  { file: "lojacorr.png", name: "LojaCorr" },
-  { file: "mag.png", name: "MAG Seguros" },
-  { file: "mercado-btc.png", name: "Mercado Bitcoin" },
-  { file: "porto.png", name: "Porto" },
-  { file: "safra.png", name: "Safra" },
-  { file: "santander.png", name: "Santander" },
-  { file: "warren.png", name: "Warren" },
-  { file: "xp.png", name: "XP" },
+  { file: "avenue.png", name: "Avenue", width: 565, height: 113 },
+  { file: "awt.png", name: "AWT", width: 612, height: 132 },
+  { file: "azos.png", name: "Azos", width: 699, height: 142 },
+  { file: "bradesco.png", name: "Bradesco", width: 503, height: 113 },
+  { file: "btg.png", name: "BTG Pactual", width: 283, height: 113 },
+  { file: "icatu.png", name: "Icatu", width: 399, height: 142 },
+  { file: "interactive-brokers.png", name: "Interactive Brokers", width: 851, height: 142 },
+  { file: "lojacorr.png", name: "LojaCorr", width: 372, height: 142 },
+  { file: "mag.png", name: "MAG Seguros", width: 294, height: 142 },
+  { file: "mercado-btc.png", name: "Mercado Bitcoin", width: 382, height: 142 },
+  { file: "porto.png", name: "Porto", width: 609, height: 142 },
+  { file: "safra.png", name: "Safra", width: 386, height: 113 },
+  { file: "santander.png", name: "Santander", width: 649, height: 113 },
+  { file: "warren.png", name: "Warren", width: 636, height: 142 },
+  { file: "xp.png", name: "XP", width: 519, height: 113 },
 ].map((partner) => ({
   ...partner,
   src: `/imgs/instituicoes-parceiras/${partner.file}`,
@@ -264,7 +269,13 @@ function Header({ mobileOpen, setMobileOpen, scrolled }) {
     >
       <div className="container header-inner">
         <a className="brand" href="/" onClick={closeMenus}>
-          <img src="/imgs/vivasi-white.png" alt="Vivasi Wealth" />
+          <img
+            src="/imgs/vivasi-white.png"
+            alt="Vivasi Wealth"
+            width={logoDimensions.width}
+            height={logoDimensions.height}
+            decoding="async"
+          />
         </a>
 
         <nav className={`nav ${mobileOpen ? "is-open" : ""}`} aria-label="Navegação principal">
@@ -656,7 +667,15 @@ function Partners() {
         <Reveal className="partner-marquee">
           <div className="partner-track">
             {[...partners, ...partners].map((partner, index) => (
-              <img key={`${partner.file}-${index}`} src={partner.src} alt={partner.name} />
+              <img
+                key={`${partner.file}-${index}`}
+                src={partner.src}
+                alt={partner.name}
+                width={partner.width}
+                height={partner.height}
+                loading="lazy"
+                decoding="async"
+              />
             ))}
           </div>
         </Reveal>
@@ -695,7 +714,13 @@ function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand-column">
           <a className="footer-brand-title" href="/">
-            <img src="/imgs/vivasi-white.png" alt="Vivasi Wealth" />
+            <img
+              src="/imgs/vivasi-white.png"
+              alt="Vivasi Wealth"
+              width={logoDimensions.width}
+              height={logoDimensions.height}
+              decoding="async"
+            />
           </a>
           <a href="/sobre-nos">Sobre nós</a>
           <a href="#contato">Contato</a>

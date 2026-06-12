@@ -1399,6 +1399,19 @@ h1 {
   background: transparent;
 }
 
+.tradingview-widget-container {
+  min-height: 44px;
+}
+
+.ticker-placeholder {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+}
+
 .hero {
   min-height: calc(100vh - var(--header-height));
   display: flex;
