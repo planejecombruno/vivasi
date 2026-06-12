@@ -158,7 +158,26 @@ const journey = [
   ["Gestão contínua e relatórios transparentes", "Acompanhamento profissional com clareza absoluta em cada decisão.", TrendingUp],
 ];
 
-const partners = Array.from({ length: 12 }, (_, index) => `/imgs/instituicoes-parceiras/${index + 1}.png`);
+const partners = [
+  { file: "avenue.png", name: "Avenue" },
+  { file: "awt.png", name: "AWT" },
+  { file: "azos.png", name: "Azos" },
+  { file: "bradesco.png", name: "Bradesco" },
+  { file: "btg.png", name: "BTG Pactual" },
+  { file: "icatu.png", name: "Icatu" },
+  { file: "interactive-brokers.png", name: "Interactive Brokers" },
+  { file: "lojacorr.png", name: "LojaCorr" },
+  { file: "mag.png", name: "MAG Seguros" },
+  { file: "mercado-btc.png", name: "Mercado Bitcoin" },
+  { file: "porto.png", name: "Porto" },
+  { file: "safra.png", name: "Safra" },
+  { file: "santander.png", name: "Santander" },
+  { file: "warren.png", name: "Warren" },
+  { file: "xp.png", name: "XP" },
+].map((partner) => ({
+  ...partner,
+  src: `/imgs/instituicoes-parceiras/${partner.file}`,
+}));
 
 const canUseHoverMenu = () =>
   typeof window !== "undefined" && window.matchMedia("(hover: hover) and (pointer: fine)").matches;
@@ -609,7 +628,9 @@ function Values() {
         <Reveal className="values-grid">
           {values.map(({ Icon, title, text }) => (
             <article key={title}>
-              <Icon size={24} />
+              <span className="value-icon">
+                <Icon size={22} />
+              </span>
               <h3>{title}</h3>
               <p>{text}</p>
             </article>
@@ -633,10 +654,9 @@ function Partners() {
           </p>
         </Reveal>
         <Reveal className="partner-marquee">
-          {/* Logos existentes no projeto. Validar autorização, lista final e vínculo antes da publicação. */}
           <div className="partner-track">
-            {[...partners, ...partners].map((src, index) => (
-              <img key={`${src}-${index}`} src={src} alt="Instituição parceira a validar" />
+            {[...partners, ...partners].map((partner, index) => (
+              <img key={`${partner.file}-${index}`} src={partner.src} alt={partner.name} />
             ))}
           </div>
         </Reveal>
