@@ -647,7 +647,7 @@ function Partners() {
       <div className="container">
         <Reveal className="section-heading centered">
           <span className="eyebrow">Ecossistema</span>
-          <h2>Grandes instituições confiam em nós.</h2>
+          <h2>Instituições que fazem parte do nosso ecossistema.</h2>
           <p>
             Conectamos nossos clientes às principais instituições financeiras para viabilizar soluções de investimento,
             crédito, proteções financeiras, câmbio e planejamento patrimonial.
