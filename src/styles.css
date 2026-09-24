@@ -1868,3 +1868,25 @@ h1 {
     min-height: 112px;
   }
 }
+
+/* Unoplan form embed */
+.cta-form-card {
+  width: min(688px, 100%);
+  margin: 40px 0 0;
+}
+
+.cta-form-card iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color-scheme: light;
+}
+
+@media (max-width: 680px) {
+  .cta-form-card {
+    margin-top: 28px;
+  }
+}
+
+

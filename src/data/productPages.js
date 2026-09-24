@@ -8,6 +8,7 @@ export const productPages = {
     badge: "Pessoa física",
     cta: "Solicitar análise de crédito",
     ctaHref: "#contato",
+    unoplanForm: "credito",
     overview: [
       "Crédito não deve ser tratado apenas como contratação de dívida. Em uma estratégia patrimonial bem desenhada, ele pode antecipar projetos, organizar fluxo de caixa, reduzir pressões de curto prazo ou permitir liquidez sem desmontar investimentos relevantes.",
       "Nosso papel é comparar caminhos, explicar custos, avaliar garantias e estruturar uma proposta compatível com sua renda, seus ativos e seus objetivos. A decisão só avança quando os impactos ficam claros.",
@@ -141,6 +142,7 @@ export const productPages = {
       "A Vivasi estrutura sua estratégia de investimentos com arquitetura aberta, acesso às principais corretoras e plataformas do mercado e liberdade para o cliente decidir onde manter e movimentar seu patrimônio.",
     cta: "Falar sobre investimentos",
     ctaHref: "#contato",
+    unoplanForm: "investimentos",
     overviewTitle: "Carteira a serviço dos seus objetivos.",
     overview: [
       "Investir bem começa por entender sua vida financeira: objetivos, prazos, liquidez necessária, tolerância a risco, estrutura familiar e momento patrimonial. Só depois faz sentido falar de produtos.",
@@ -254,6 +256,7 @@ export const productPages = {
       "A Vivasi estrutura proteções financeiras personalizadas para preservar sua família, seu patrimônio e seus planos. Cotamos em diversas instituições para comparar coberturas, custos, limites e condições antes da contratação.",
     cta: "Cotar proteção financeira",
     ctaHref: "#contato",
+    unoplanForm: "seguros",
     overviewTitle: "Proteção precisa fazer sentido no seu mapa patrimonial.",
     overview: [
       "Seguro não deve ser escolhido apenas pelo menor prêmio. A proteção correta nasce de uma leitura dos riscos que podem afetar renda, patrimônio, família, saúde, mobilidade e continuidade dos planos.",
@@ -871,6 +874,7 @@ export const productPages = {
       "A Vivasi estrutura alternativas de crédito para empresas com leitura de fluxo de caixa, garantias, recebíveis, ciclo operacional e capacidade real de pagamento. Consórcios empresariais também entram como ferramenta de aquisição planejada de ativos.",
     cta: "Estruturar crédito empresarial",
     ctaHref: "#contato",
+    unoplanForm: "credito",
     overviewTitle: "Crédito empresarial precisa preservar a operação.",
     overview: [
       "A contratação de crédito para PJ não deve ser tratada como uma decisão isolada. Cada operação impacta caixa, garantias, margem, capacidade de investimento e previsibilidade da empresa.",
@@ -1128,6 +1132,7 @@ export const productPages = {
       "A Vivasi estrutura seguros para empresas, sócios, executivos e profissionais liberais a partir dos riscos reais da atividade, protegendo patrimônio, contratos, pessoas-chave, responsabilidade profissional e continuidade do negócio.",
     cta: "Avaliar seguros empresariais",
     ctaHref: "#contato",
+    unoplanForm: "seguros",
     overviewTitle: "Proteção corporativa não pode ser genérica.",
     overview: [
       "Toda empresa e todo profissional que assume responsabilidade técnica carregam riscos financeiros, patrimoniais, jurídicos, contratuais e operacionais. A pergunta não é apenas o que contratar, mas quais riscos podem comprometer a continuidade da atividade.",
