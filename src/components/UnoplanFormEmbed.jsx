@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function UnoplanFormEmbed({ form, className = "" }) {
   const frameRef = useRef(null);
-  const [height, setHeight] = useState(form?.height || 640);
+  const [height, setHeight] = useState(form?.height || 720);
 
   useEffect(() => {
     const onMessage = (event) => {
@@ -24,10 +24,14 @@ export function UnoplanFormEmbed({ form, className = "" }) {
       ref={frameRef}
       className={className}
       id={`unoplan-${form.id}`}
-      src={`https://unoplan.com.br/embed/${form.id}`}
+      src={`https://unoplan.com.br/embed/${form.id}?theme=light`}
       title={form.title}
-      style={{ width: "100%", border: 0, height }}
+      width="100%"
+      height={height}
+      style={{ width: "100%", border: 0, display: "block", height }}
       loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      allowFullScreen
     />
   );
 }
